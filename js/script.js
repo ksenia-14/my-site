@@ -1,86 +1,18 @@
-// module1
-const addCats = () => {
-    let numAddCats = document.getElementById("numCats").value;
-    // console.log(numAddCats);
-    while(numAddCats > 0) {
-        addOneCat();
-        numAddCats--;
-    }
-}
+import * as module1 from "./modules/module1.js";
+import * as module2 from "./modules/module2.js";
+import * as module3 from "./modules/module3.js";
 
-const addOneCat = () => {
-    // нахождение последнего кота
-    const cat = document.querySelector('.cat:last-child');
-    // создание элемента
-    const newCat = document.createElement('img');
+// получаем кнопку
+const btnAddCats = document.getElementById("btnAddCats");
+btnAddCats.addEventListener('click', module1.addCats);
 
-    // подсчет элементов
-    let numOfCats = document.getElementsByClassName('cat').length;
-    // console.log(numOfCats);
-    let varCase = numOfCats % 10;
-    // console.log(varCase);
+const btnDeleteCats = document.getElementById("btnDeleteCats");
+btnDeleteCats.addEventListener('click', module1.deleteCats);
 
-    // выбор элемента
-    switch (varCase) {
-        case 0: newCat.setAttribute('src', './img/cats/cat1.png'); break;
-        case 1: newCat.setAttribute('src', './img/cats/cat2.png'); break;
-        case 2: newCat.setAttribute('src', './img/cats/cat3.png'); break;
-        case 3: newCat.setAttribute('src', './img/cats/cat4.png'); break;
-        case 4: newCat.setAttribute('src', './img/cats/cat5.png'); break;
-        case 5: newCat.setAttribute('src', './img/cats/cat6.png'); break;
-        case 6: newCat.setAttribute('src', './img/cats/cat7.png'); break;
-        case 7: newCat.setAttribute('src', './img/cats/cat8.png'); break;
-        case 8: newCat.setAttribute('src', './img/cats/cat9.png'); break;
-        case 9: newCat.setAttribute('src', './img/cats/cat5.png'); break;
-        default: break;
-    }
+const btnClone = document.getElementById("btn-clone");
+btnClone.addEventListener('click', module2.cloneSection);
 
-    // добавление элемента
-    const containerCats = document.querySelector('.container-cats-images');
-    newCat.classList.add('cat');
-    containerCats.append(newCat);
-}
-
-const deleteCats = () => {
-    let numDeleteCats = document.getElementById("numCats").value;
-    // console.log(numAddCats);
-    while(numDeleteCats > 0) {
-        deleteOneCat();
-        numDeleteCats--;
-
-    }
-}
-
-const deleteOneCat = () => {
-    // подсчет элементов
-    let numOfCats = document.getElementsByClassName('cat').length;
-    if (numOfCats == 0) {
-        return;
-    }
-    // нахождение последнего кота
-    const cat = document.querySelector('.cat:last-child');
-    // удаление кота
-    cat.remove();
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+const btnOk = document.getElementById("ok-button");
+btnOk.addEventListener('click', module3.readCat);
 
 

@@ -21,7 +21,7 @@
 
     </header>
 
-    <div class="container">
+    <div id="first" class="container">
         <div class="container-cats">
             <div class="container-cats-images">
                 <img class="cat" src="./img/cats/cat1.png" alt="cat1">
@@ -35,17 +35,16 @@
                     <input id="numCats" class="cat-input" type="number" min="1">
                 </div>
                 
-                <button class="cat-button add-button" onclick="addCats()">Добавить котов</button>
-                <button class="cat-button delete-button" onclick="deleteCats()">Убрать котов</button>
+                <button class="cat-button add-button" id="btnAddCats">Добавить котов</button>
+                <button class="cat-button delete-button" id="btnDeleteCats">Убрать котов</button>
             </div>
-            <img class="separator" src="./img/separator.png" alt="separator">
+            <img id="second" class="separator" src="./img/separator.png" alt="separator">
         </div>
 
-        <div></div>
         <div class="container-clone-cat">
             <img class="cat-long" src="./img/cat-long.png" alt="cat-long">
-            <button class="clone-button">Клонировать раздел</button>
-            <img class="separator" src="./img/separator.png" alt="separator">
+            <button id="btn-clone" class="clone-button">Клонировать раздел</button>
+            <img id="third" class="separator" src="./img/separator.png" alt="separator">
         </div>
         
         <h2>Получите кота, которого вы хотите</h2>
@@ -54,19 +53,19 @@
             <div class="form">
                 <div class="font-header"><font class="font-header">Введите характеристики кота</font></div>
                 <br>
-                <div><font>Имя</font><br><input type="text"></div>
+                <div><font>Имя</font><br><input id="cat-name" type="text"></div>
                 <br>
-                <div><font>Цвет шерсти</font><br><input type="text"></div>
+                <div><font>Цвет шерсти</font><br><input id="cat-color" type="text"></div>
                 <br>
-                <div><font>Размер</font><br><input type="text"></div>
+                <div><font>Размер</font><br><input id="cat-size" type="text"></div>
                 <br>
-                <button class="ok-button">ОК</button>
+                <button id="ok-button" class="ok-button">ОК</button>
             </div>
-            <img class="box" src="./img/box (1).png" alt="box">
+            <div id="yourCat" class="div-with-box"></div>
         </div>
     </div>
     <footer></footer>
 
-    <script src="./js/script.js"></script>
+    <script type="module" src="./js/script.js"></script>
 </body>
 </html>
