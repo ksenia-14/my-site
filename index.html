@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cats</title>
+    <link rel="icon" href="./img/icon-cat.png">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    
+    <header>
+        <img class="logo" src="./img/logo-cat.png" alt="logo-cat">
+        <h1>CATS</h1>
+        <div class="header-menu">
+            <a href="#first">Пeрвый раздел</a>
+            <a href="#second">Второй раздел</a>
+            <a href="#third">Третий раздел</a>
+        </div>
+
+    </header>
+
+    <div class="container">
+        <div class="container-cats">
+            <div class="container-cats-images">
+                <img class="cat" src="./img/cats/cat1.png" alt="cat1">
+                <img class="cat" src="./img/cats/cat2.png" alt="cat2">
+                <img class="cat" src="./img/cats/cat3.png" alt="cat3">
+                <img class="cat" src="./img/cats/cat4.png" alt="cat4">
+            </div>
+            <div class="container-cats-buttons">
+                <div>
+                    <font>Введите количество котов</font>
+                    <input id="numCats" class="cat-input" type="number" min="1">
+                </div>
+                
+                <button class="cat-button add-button" onclick="addCats()">Добавить котов</button>
+                <button class="cat-button delete-button" onclick="deleteCats()">Убрать котов</button>
+            </div>
+            <img class="separator" src="./img/separator.png" alt="separator">
+        </div>
+
+        <div></div>
+        <div class="container-clone-cat">
+            <img class="cat-long" src="./img/cat-long.png" alt="cat-long">
+            <button class="clone-button">Клонировать раздел</button>
+            <img class="separator" src="./img/separator.png" alt="separator">
+        </div>
+        
+        <h2>Получите кота, которого вы хотите</h2>
+        <div class="container-cat-in-box">
+            <img class="cat-in-box" src="./img/cat-in-box.png" alt="cat-in-box">
+            <div class="form">
+                <div class="font-header"><font class="font-header">Введите характеристики кота</font></div>
+                <br>
+                <div><font>Имя</font><br><input type="text"></div>
+                <br>
+                <div><font>Цвет шерсти</font><br><input type="text"></div>
+                <br>
+                <div><font>Размер</font><br><input type="text"></div>
+                <br>
+                <button class="ok-button">ОК</button>
+            </div>
+            <img class="box" src="./img/box (1).png" alt="box">
+        </div>
+    </div>
+    <footer></footer>
+
+    <script src="./js/script.js"></script>
+</body>
+</html>
